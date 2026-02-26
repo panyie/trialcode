@@ -1,0 +1,28 @@
+2026-02-26 13:55:01,418 INFO Scan started
+2026-02-26 13:55:04,213 ERROR Traceback (most recent call last):
+  File "C:/Users/rguhi/OneDrive/Desktop/PythonProjects/BreakoutAnalysis/BreakoutAnalysis_1.py", line 197, in send_email_report
+    server.login(EMAIL_SENDER, EMAIL_PASSWORD)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rguhi\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+                   ~~~~~~~~~^
+        authmethod, getattr(self, method_name),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        initial_response_ok=initial_response_ok)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rguhi\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 652, in auth
+    authobject(challenge).encode('ascii'), eol='')
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'encode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:/Users/rguhi/OneDrive/Desktop/PythonProjects/BreakoutAnalysis/BreakoutAnalysis_1.py", line 195, in send_email_report
+    with smtplib.SMTP(SMTP_SERVER, SMTP_PORT, timeout=30) as server:
+         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rguhi\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 284, in __exit__
+    raise SMTPResponseException(code, message)
+smtplib.SMTPResponseException: (334, b'UGFzc3dvcmQ6')
+
+2026-02-26 13:55:04,214 INFO Scan complete
